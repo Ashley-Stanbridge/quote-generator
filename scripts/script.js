@@ -29,3 +29,9 @@ function returnQuoteBody(object) {
 function returnQuoteAuthor(object) {
 return object.author;
 }
+
+function displayQuote() {
+  console.log("Hello ashley");
+  var quote = getRandomQuote(quotes);
+  $(".text").append(returnQuoteBody(quote));
+}
