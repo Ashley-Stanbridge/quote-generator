@@ -15,6 +15,26 @@ var quotes = [
   "quote" : "There are two types of people in this world. Those that enter a room and say 'Here I am!' and those that enter a room and say 'There you are!'.",
   "author" : "Unknown"
   },
+  {
+  "quote" : "Now it's a sqirt mecca for mystery artist, but back then it was just magic.",
+  "author" : "Jim Snyder on Kayaking"
+  },
+  {
+  "quote" : "Because it's there.",
+  "author" : "George Mallory on climbing mountains"
+  },
+  {
+  "quote" : "For I know the plans that I have for you.",
+  "author" : "Ashley Stanbridge"
+  },
+  {
+  "quote" : "The significant problems we face cannot be solved at the same level of thinking we were at when we created them.",
+  "author" : "Albert Einstein"
+  },
+  {
+  "quote" : "I got a highschool crush on a california girl, oh yeah. I got a cool guitar and a bag of marijuana man, oh woah oh.",
+  "author" : "Joseph Quested"
+  },
 ];
 
 var previousQuoteIndex;
