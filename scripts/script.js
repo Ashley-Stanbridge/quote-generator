@@ -17,9 +17,19 @@ var quotes = [
   },
 ];
 
+var previousQuoteIndex;
+
 function getRandomQuote (array) {
-  var index =   Math.floor(Math.random() * ((array.length - 1) - 0 + 1)) + 0;
-  return array[index];
+  var index = Math.floor(Math.random() * ((array.length - 1) - 0 + 1)) + 0;
+  if (index != previousQuoteIndex) {
+    previousQuoteIndex = index;
+    console.log("This is a fresh quote!");
+    return array[index];
+
+  } else {
+    console.log("This is an old quote...");
+    return getRandomQuote(array);
+  }
 }
 
 function returnQuoteBody(object) {
@@ -30,8 +40,17 @@ function returnQuoteAuthor(object) {
 return object.author;
 }
 
-function displayQuote() {
-  console.log("Hello ashley");
+function initiateNewQuote() {
+  var field = $(".text");
+  clearTextField(field);
   var quote = getRandomQuote(quotes);
-  $(".text").append(returnQuoteBody(quote));
+  displayQuote(quote, field);
+}
+
+function clearTextField(field) {
+  field.empty();
+}
+
+function displayQuote(quote, field) {
+  field.append(returnQuoteBody(quote) + "<br><br> - " + returnQuoteAuthor(quote));
 }
