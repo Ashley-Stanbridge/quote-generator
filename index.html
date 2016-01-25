@@ -3,6 +3,22 @@
   <head>
    <link rel="stylesheet" type="text/css" href="quote-generator.css">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>
   </head>
   <body>
     <div class="main">
@@ -11,9 +27,10 @@
       </div>
       <div class="buttonDiv">
         <p class="submit"> 
-         <button type="button" onclick="initiateNewQuote()">Test</button>
+         <button type="button" onclick="initiateNewQuote()">Quote</button>
          </p> 
       </div>
+      <div id="container"></div>
     </div>
     <script src="scripts/script.js"></script>
   </body>

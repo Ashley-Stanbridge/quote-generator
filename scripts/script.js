@@ -65,6 +65,7 @@ function initiateNewQuote() {
   clearTextField(field);
   var quote = getRandomQuote(quotes);
   displayQuote(quote, field);
+  generateTwitterButton(quote);
 }
 
 function clearTextField(field) {
@@ -73,4 +74,17 @@ function clearTextField(field) {
 
 function displayQuote(quote, field) {
   field.append(returnQuoteBody(quote) + "<br><br> - " + returnQuoteAuthor(quote));
+}
+
+function generateTwitterButton(quote) {
+ $("#container").empty();
+  twttr.widgets.createShareButton(
+  ' ',
+  document.getElementById('container'),
+  {
+    text: returnQuoteBody(quote) + ' - ' +
+    returnQuoteAuthor(quote),
+    url : ""
+  }
+);
 }
